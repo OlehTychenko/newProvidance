@@ -373,3 +373,53 @@ body {
 }
 
 /* Subscribe styles end */
+
+/* Footer styles end */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 90px auto 0px;
+    max-width: 1074px;
+}
+
+.footer__left-item {
+    max-width: 245px;
+}
+
+.footer__social-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__right-items {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer__right-item {
+    display: flex;
+    flex-direction: column;
+    margin-right: 94px;
+}
+
+.footer__right-title {
+    margin-bottom: 26px;
+    font-weight: 900;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.footer__right-item > a {
+    margin-bottom: 16px;
+    text-decoration: none;
+    color: #8C8F94;
+}
+
+.footer__right-item:last-child {
+    margin-right: 0px;
+}
+
+/* Footer styles end */
