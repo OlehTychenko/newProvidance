@@ -82,6 +82,18 @@ body {
     text-transform: capitalize;
 }
 
+.navbar__container a {
+    text-decoration: none;
+    color: #26272D;
+}
+
+.navbar__container a:hover {
+    color: #8C8F94;
+    border-bottom: 1px solid #8C8F94;
+    transition: 0.25s;
+    padding-bottom: 5px;
+}
+
 .navbar__left-side {
     display: flex;
     font-family: 'Lato', sans-serif;
@@ -124,18 +136,32 @@ body {
     border: 1px solid white;
     border-radius: 30px;
     color: white;
+    outline: none;
+}
+
+.navbar__button-description {
+    padding-left: 25px;
+    background: url(../img/header/apple_button.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: white;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-family: 'Lato', sans-serif;
 }
 
 .navbar__button:hover {
-    color: #267df4;
     background-color: white;
     border: 1px solid #267df4;
+    transition: .25s;
+    box-shadow: 0px 0px 3px #267df4;
 }
 
-.navbar__button-icon {
-    width: 18px;
-    height: 20px;
-    margin-right: 14px;
+.navbar__button:hover .navbar__button-description {
+    background: url(../img/header/apple_button-blue.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: #267df4 !important;
 }
 
 .intro__container {
@@ -151,7 +177,20 @@ body {
     text-align: center;
     font-family: 'Varela Round', sans-serif;
     font-size: 62px;
+    animation: logo_anim 1.2s;
 }
+
+  @keyframes logo_anim {
+    0% {
+      -webkit-transform: scale3d(0, 0, -1);
+              transform: scale3d(0, 0, -1);
+      display: inline;
+    }
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+  }
 
 .intro-description {
     margin-bottom: 60px;
@@ -170,19 +209,20 @@ body {
     border: 1px solid hsla(231, 8%, 16%, 0.10196078431372549);
     border-radius: 30px;
     font-size: 16px;
+    cursor: pointer;
 }
 
 .intro-button-icon {
     margin-right: 16px;
 }
 
-@media screen and (max-width: 992px) {
-    .intro-title {
-        margin: 0px 10px 40px;
-    }
-    .intro-description {
-        margin: 0px 15px 60px;
-    }
+.intro-button:hover {
+    border: 1px solid #26272D;
+    transition: 0.25s;
+}
+.intro-button:hover .intro-button-icon {
+    transition: 0.25s;
+    padding-left: 10px;
 }
 
  /* header styles end */
@@ -239,6 +279,9 @@ body {
     flex-wrap: wrap;
 }
 
+.iphone__slider-item {
+    width: 20%;
+}
 
 /* Iphone__screens style end */
 
@@ -583,6 +626,15 @@ body {
     }
     .footer__copyrights-items {
         margin: 26px 15px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .intro-title {
+        margin: 0px 10px 40px;
+    }
+    .intro-description {
+        margin: 0px 15px 60px;
     }
 }
 
