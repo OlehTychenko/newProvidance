@@ -44,3 +44,14 @@ STARTER.onclick = CHANGE_STARTER_FOCUS;
 PRO.onclick = CHANGE_PRO_FOCUS;
 
 // Add toggle fucntion for changing classes in plan section (cards)
+
+// Hamburger
+
+const HAMBURGER = document.getElementById('hamburger');
+const NAV_LEFT = document.getElementById('nav__left-side');
+const NAV_RIGHT = document.getElementById('nav__right-side');
+
+HAMBURGER.addEventListener('click', () => {
+    NAV_LEFT.classList.toggle('show');
+    NAV_RIGHT.classList.toggle('show');
+});
