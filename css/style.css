@@ -263,6 +263,7 @@ body {
 }
 
 .iphone__screens-subtitle {
+    margin-bottom: 46px;
     font-family: 'Lato';
     font-style: normal;
     font-weight: 900;
@@ -274,14 +275,26 @@ body {
 
 .iphone__slider-items {
     display: flex;
-    justify-content: space-between;
-    margin-top: 46px;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    width: 100%;
+    overflow: hidden;
 }
 
 .iphone__slider-item {
-    width: 20%;
+    margin-right: 28px;
+    box-shadow: 0px 0px 35px #8C8F94;
 }
+
+.iphone__slider-item-iphone {
+    box-shadow: none;
+}
+
+.iphone__slider-item:last-child {
+    margin-right: 0px;
+}
+
 
 /* Iphone__screens style end */
 
@@ -377,12 +390,13 @@ body {
     width: 342px;
     height: 512px;
     background: url(../img/plan/plan-item.png);
-    transition: 0.2s;
+    transition: 0.07s;
 }
 
 .plan__item-focused {
     background: url(../img/plan/plan-item_focused.png);
     transform: scale(1.1);
+    transition: 0.3s;
 }
 
 .plan__item-title {
@@ -444,8 +458,13 @@ body {
     color: #267DF4;
     border: 1px #267DF4 solid;
     border-radius: 30px;
+    transition: 0.35s;
 }
 
+.plan__item-confirm-focused {
+    color: white;
+    background: #267DF4;
+}
 
 /* Plan styles end */
 
@@ -699,6 +718,12 @@ body {
     }
     .intro-phone {
         width: 90%;
+    }
+    .plan__item {
+        width: 280px;
+    }
+    .plan__item-options {
+        height: 130px;
     }
     .subscribe__field {
         width: 250px;
