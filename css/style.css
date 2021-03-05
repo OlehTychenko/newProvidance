@@ -329,18 +329,20 @@ body {
     color: hsla(210, 7%, 16%, 0.4);
     border: 1px solid hsla(210, 7%, 16%, 0.4);
     border-radius: 30px;
+    cursor: pointer;
+    padding: 0px 5px;
 }
 
 .plan__toggle-focused {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 3px;
     width: 50%;
     height: 42px;
     color: #26272D;
     border-radius: 30px;
     box-shadow: 0px 0px 10px 0px hsla(210, 7%, 16%, 0.4);
+    transition: 0.25s;
 }
 
 .plan__toggle-unfocused {
@@ -348,6 +350,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 50%;
+    height: 42px;
 }
 
 .plan-description {
@@ -374,6 +377,12 @@ body {
     width: 342px;
     height: 512px;
     background: url(../img/plan/plan-item.png);
+    transition: 0.3s;
+}
+
+.plan__item-focused {
+    background: url(../img/plan/plan-item_focused.png);
+    transform: scale(1.1);
 }
 
 .plan__item-title {
@@ -611,7 +620,7 @@ body {
         text-align: center;
     }
     .plan__toggle {
-        margin-bottom: 30px;
+        margin-bottom: 90px;
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -658,6 +667,9 @@ body {
     }
     .plan__items {
         flex-direction: column;
+    }
+    .plan__item {
+        margin-bottom: 20px;
     }
     .subscribe-title {
         margin: 0px 10px 48px;
