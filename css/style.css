@@ -377,7 +377,7 @@ body {
     width: 342px;
     height: 512px;
     background: url(../img/plan/plan-item.png);
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 .plan__item-focused {
