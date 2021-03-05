@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <!-- Header -->
     <header class="header">
         <div class="navbar__container">
             <ul class="navbar__left-side">
@@ -44,8 +45,8 @@
             <img class="intro-phone" src='./img/header/intro_iphone.png'>
         </div>
     </header>
-
-
+    <!-- Header -->
+    <!--Iphone Screens-->
     <section class="iphone__screens">
         <div class="iphone__screens-container">
             <div class="iphone__screens-name">
@@ -80,13 +81,11 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
-
     </section>
-
-
+    <!--Iphone Screens-->
+    <!--Subscribe-->
     <section class="subscribe">
         <h2 class="subscribe-title">Get it to your smartphone</h2>
         <div class="subscribe__field">
@@ -94,7 +93,8 @@
             <div class="subscribe__field-confirm"><a href="#">Send Invite</a></div>
         </div>
     </section>
-
+    <!--Subscribe-->
+    <!--Plan-->
     <section class="plan">
         <div class="plan__wrapper">
             <div>
@@ -102,8 +102,8 @@
                 <div class="plan__toggle">
                     <p class="plan__toggle-description">you are</p>
                     <div class="plan__toggle-wrapper">
-                        <div class="plan__toggle-focused">Individual</div>
-                        <div class="plan__toggle-unfocused">Company</div>
+                        <div id="individual__toggle" class="plan__toggle-unfocused">Individual</div>
+                        <div id="company__toggle" class="plan__toggle-unfocused plan__toggle-focused">Company</div>
                     </div>
                     <p class="plan-description">Thus much I thought proper to tell you in relation to yourself, and to
                         the trust I reposed in you.
@@ -114,7 +114,7 @@
                 </div>
             </div>
             <div class="plan__items">
-                <div class="plan__item">
+                <div id="starter__toggle" class="plan__item plan__item-focused">
                     <h3 class="plan__item-title">starter</h3>
                     <div class="plan__item-price">
                         <p>free</p>
@@ -126,7 +126,7 @@
                     </div>
                     <a class="plan__item-confirm">Get started</a>
                 </div>
-                <div class="plan__item">
+                <div id="pro__toggle" class="plan__item">
                     <h3 class="plan__item-title">pro</h3>
                     <div class="plan__item-price">
                         <p>$4.99</p>
@@ -142,6 +142,8 @@
             </div>
         </div>
     </section>
+    <!--Plan-->
+    <!--Subscribe-->
     <section class="subscribe">
         <h2 class="subscribe-title">Subscribe our newsletters</h2>
         <div class="subscribe__field">
@@ -150,6 +152,8 @@
         </div>
         <p class="subscribe-description">We promise to never spam you.</p>
     </section>
+    <!--Subscribe-->
+    <!--Footer-->
     <footer class="footer">
         <hr>
         <div class="footer__items">
@@ -205,6 +209,8 @@
             </div>
         </div>
     </footer>
+    <!--Footer-->
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
