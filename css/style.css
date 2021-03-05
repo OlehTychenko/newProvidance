@@ -225,6 +225,15 @@ body {
     padding-left: 10px;
 }
 
+.hamburger {
+    background-color: transparent;
+    border: 0px;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+    display: none;
+}
+
  /* header styles end */
 
 /* header styles end */
@@ -390,6 +399,7 @@ body {
     width: 342px;
     height: 512px;
     background: url(../img/plan/plan-item.png);
+    cursor: pointer;
     transition: 0.07s;
 }
 
@@ -637,9 +647,6 @@ body {
 
 
 @media screen and (max-width: 1200px) {
-    .navbar__container {
-        display: none;
-    }
     .plan__wrapper {
         flex-direction: column;
         align-items: center;
@@ -673,6 +680,47 @@ body {
 }
 
 @media screen and (max-width: 992px) {
+    .navbar__container {
+        padding: 44px 25px 0px;
+    }
+    .navbar__container > ul {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+    #nav__left-side.show {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 88px;
+        width: 90%;
+        text-align: center;
+        background: black;
+    }
+    #nav__left-side.show > li {
+        margin-bottom: 20px;
+    }
+    .navbar__left-side>li {
+        margin-right: 0px;
+    }
+    #nav__right-side.show {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        top: 200px;
+        width: 90%;
+        background: black;
+    }
+    .show a {
+        color: white;
+    }
+    #nav__right-side.show > li {
+        margin-bottom: 20px;
+        margin-left: 0px;
+    }
     .intro-title {
         margin: 0px 10px 40px;
     }
