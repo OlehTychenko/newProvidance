@@ -14,26 +14,33 @@ const INDIVIDUAL = document.getElementById('individual__toggle')
 const COMPANY = document.getElementById('company__toggle')
 
 COMPANY.onclick = CHANGE_COMPANY_FOCUS;
-INDIVIDUAL.onclick = CHANGE_INDIVIDUAL_FOCUS; 
+INDIVIDUAL.onclick = CHANGE_INDIVIDUAL_FOCUS;
 
 // Add toggle fucntion for changing classes in plan section
 
-// Add toggle fucntion for changing classes in plan section
+// Add toggle fucntion for changing classes in plan section (cards)
 
 const CHANGE_STARTER_FOCUS = () => {
     PRO.classList = ('plan__item');
+    PRO_BUTTON.classList = ('plan__item-confirm')
     STARTER.classList = ('plan__item plan__item-focused');
+    STARTER_BUTTON.classList = ('plan__item-confirm plan__item-confirm-focused');
 }
 
 const CHANGE_PRO_FOCUS = () => {
     STARTER.classList = ('plan__item');
+    STARTER_BUTTON.classList = ('plan__item-confirm')
     PRO.classList = ('plan__item plan__item-focused');
+    PRO_BUTTON.classList = ('plan__item-confirm plan__item-confirm-focused');
 }
 
 const STARTER = document.getElementById('starter__toggle')
 const PRO = document.getElementById('pro__toggle')
 
-STARTER.onclick = CHANGE_STARTER_FOCUS;
-PRO.onclick = CHANGE_PRO_FOCUS; 
+const STARTER_BUTTON = document.getElementById('started__button')
+const PRO_BUTTON = document.getElementById('pro__button')
 
-// Add toggle fucntion for changing classes in plan section
+STARTER.onclick = CHANGE_STARTER_FOCUS;
+PRO.onclick = CHANGE_PRO_FOCUS;
+
+// Add toggle fucntion for changing classes in plan section (cards)
