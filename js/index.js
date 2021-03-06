@@ -1,3 +1,25 @@
+// Hamburger
+
+const HAMBURGER = document.getElementById('hamburger');
+const HAMBURGER_MENU = document.getElementById('hamburger_menu');
+const HAMBURGER_CLOSE = document.getElementById('hamburger_close');
+const HAMBURGER_ITEMS = document.getElementsByClassName('hamb__item');
+console.log(HAMBURGER_ITEMS)
+
+HAMBURGER.addEventListener('click', () => {
+    HAMBURGER_MENU.classList = ('hamburger-menu show');
+});
+
+HAMBURGER_CLOSE.addEventListener('click', () => {
+    HAMBURGER_MENU.classList = ('hamburger-menu');
+});
+
+HAMBURGER_ITEMS.addEventListener('click', () => {
+    HAMBURGER_MENU.classList = ('hamburger-menu');
+})
+
+// Hamburger
+
 // Add toggle fucntion for changing classes in plan section
 
 const CHANGE_COMPANY_FOCUS = () => {
@@ -44,14 +66,3 @@ STARTER.onclick = CHANGE_STARTER_FOCUS;
 PRO.onclick = CHANGE_PRO_FOCUS;
 
 // Add toggle fucntion for changing classes in plan section (cards)
-
-// Hamburger
-
-const HAMBURGER = document.getElementById('hamburger');
-const NAV_LEFT = document.getElementById('nav__left-side');
-const NAV_RIGHT = document.getElementById('nav__right-side');
-
-HAMBURGER.addEventListener('click', () => {
-    NAV_LEFT.classList.toggle('show');
-    NAV_RIGHT.classList.toggle('show');
-});
