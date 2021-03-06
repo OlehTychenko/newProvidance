@@ -11,25 +11,40 @@
 </head>
 
 <body>
+    <!-- Header -->
     <header class="header">
         <div class="navbar__container">
+            <button id="hamburger" class="hamburger">☰</button>
             <ul class="navbar__left-side">
-                <li><img src="./img/header/menu_button.png"></li>
-                <li>tour</li>
-                <li>features</li>
-                <li>pricing</li>
+                <li><a href="#">tour</a></li>
+                <li><a href="#">features</a></li>
+                <li><a href="#">pricing</a></li>
             </ul>
             <div class="navbar__center">
                 <h1 class="navbar-title"><span>new</span>providance</h1>
             </div>
             <ul class="navbar__right-side">
-                <li>help</li>
-                <li>contacts</li>
+                <li><a href="#">help</a></li>
+                <li><a href="#">contacts</a></li>
                 <li>
-                    <a class="navbar__button">
-                        <img class="navbar__button-icon" src="./img/header/apple_button.png">
-                        <p>get app</p>
-                    </a>
+                    <button class="navbar__button">
+                        <p class="navbar__button-description">get app</p>
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <div id="hamburger_menu" class="hamburger-menu">
+            <ul>
+                <li><button id="hamburger_close" class="hamburger">X</button></li>
+                <li><a class="hamb__item" href="#">tour</a></li>
+                <li><a class="hamb__item" href="#">features</a></li>
+                <li><a class="hamb__item" href="#">pricing</a></li>
+                <li><a class="hamb__item" href="#">help</a></li>
+                <li><a class="hamb__item" href="#">contacts</a></li>
+                <li>
+                    <button class="navbar__button">
+                        <p class="navbar__button-description">get app</p>
+                    </button>
                 </li>
             </ul>
         </div>
@@ -40,7 +55,7 @@
                 <img class="intro-button-icon" src="./img/header/play_icon.png">
                 <p>Watch video</p>
             </a>
-            <img src='./img/header/intro_iphone.png'>
+            <img class="intro-phone" src='./img/header/intro_iphone.png'>
         </div>
     </header>
 
@@ -67,9 +82,59 @@
             </div>
             <!-- <hr class="feature_divider"> -->
         </div>
-        <div class="features_diviver"><img src="img/features/divider.png" alt="divider"></div>
+        <div class="features_divider"><img src="img/features/divider.png" alt="divider"></div>
     </section>
 
+    <!-- Header -->
+    <!--Iphone Screens-->
+    <section class="iphone__screens">
+        <div class="iphone__screens-container">
+            <div class="iphone__screens-name">
+                <h1 class="iphone__screens-title">Beatiful Interface</h1>
+                <p class="iphone__screens-subtitle">landing screen</p>
+            </div>
+            <div class="iphone__slider">
+                <div class="iphone__slider-items">
+                    <div class="iphone__slider-item">
+                        <div class="iphone__slider-item-img">
+                            <img src="img/iphone-screens/Screen 1@1X.png" alt="screen with info////">
+                        </div>
+                    </div>
+                    <div class="iphone__slider-item">
+                        <div class="iphone__slider-item-img">
+                            <img src="img/iphone-screens/Screen 2@1X.png" alt="screen with info////">
+                        </div>
+                    </div>
+                    <div class="iphone__slider-item iphone__slider-item-iphone">
+                        <div class="iphone__slider-item-img">
+                            <img src="img/iphone-screens/iPhone 6@1X (1).png" alt="screen with info////">
+                        </div>
+                    </div>
+                    <div class="iphone__slider-item">
+                        <div class="iphone__slider-item-img">
+                            <img src="img/iphone-screens/Screen 3@1X.png" alt="screen with info////">
+                        </div>
+                    </div>
+                    <div class="iphone__slider-item">
+                        <div class="iphone__slider-item-img">
+                            <img src="img/iphone-screens/Screen 4@1X.png" alt="screen with info////">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Iphone Screens-->
+    <!--Subscribe-->
+    <section class="subscribe">
+        <h2 class="subscribe-title">Get it to your smartphone</h2>
+        <div class="subscribe__field">
+            <input class="subscribe__field-input" type="text" placeholder="denis@getcraftwork.com">
+            <div class="subscribe__field-confirm"><a href="#">Send Invite</a></div>
+        </div>
+    </section>
+    <!--Subscribe-->
+    <!--Plan-->
     <section class="plan">
         <div class="plan__wrapper">
             <div>
@@ -77,8 +142,8 @@
                 <div class="plan__toggle">
                     <p class="plan__toggle-description">you are</p>
                     <div class="plan__toggle-wrapper">
-                        <div class="plan__toggle-focused">Individual</div>
-                        <div class="plan__toggle-unfocused">Company</div>
+                        <div id="individual__toggle" class="plan__toggle-unfocused">Individual</div>
+                        <div id="company__toggle" class="plan__toggle-unfocused plan__toggle-focused">Company</div>
                     </div>
                     <p class="plan-description">Thus much I thought proper to tell you in relation to yourself, and to the trust I reposed in you.
                     </p>
@@ -88,7 +153,7 @@
                 </div>
             </div>
             <div class="plan__items">
-                <div class="plan__item">
+                <div id="starter__toggle" class="plan__item plan__item-focused">
                     <h3 class="plan__item-title">starter</h3>
                     <div class="plan__item-price">
                         <p>free</p>
@@ -98,9 +163,9 @@
                         <p class="plan__item-option">Unlimeted events</p>
                         <p class="plan__item-option">Connect Dropbox & Evernote</p>
                     </div>
-                    <a class="plan__item-confirm">Get started</a>
+                    <a id="started__button" class="plan__item-confirm plan__item-confirm-focused">Get started</a>
                 </div>
-                <div class="plan__item">
+                <div id="pro__toggle" class="plan__item">
                     <h3 class="plan__item-title">pro</h3>
                     <div class="plan__item-price">
                         <p>$4.99</p>
@@ -111,72 +176,91 @@
                         <p class="plan__item-option">Connect Dropbox & Evernote</p>
                         <p class="plan__item-option">Personal Assistant</p>
                     </div>
-                    <a class="plan__item-confirm">Make me a Pro</a>
+                    <a id="pro__button" class="plan__item-confirm">Make me a Pro</a>
                 </div>
             </div>
         </div>
     </section>
+    <!--Plan-->
+    <!--Subscribe-->
     <section class="subscribe">
         <h2 class="subscribe-title">Subscribe our newsletters</h2>
         <div class="subscribe__field">
             <input class="subscribe__field-input" type="text" placeholder="Your e-mail">
-            <div class="subscribe__field-confirm"><a href="#">Subscribe</a></div>
+            <button class="subscribe__field-confirm"><a href="#">Subscribe</a></button>
         </div>
         <p class="subscribe-description">We promise to never spam you.</p>
     </section>
-    <hr>
-    <section class="footer">
-        <div class="footer__left-item">
-            <img src="./img/footer/NewProvidence_logo.png">
-            <p>It was some time before he obtained any answer, and the reply, when made, was unpropitious.</p>
-            <img src="./img/footer/apple_store.png">
-            <nav class="footer__social">
-                <ul class="footer__social-items">
-                    <li>
-                        <a href="#"><img src="./img/footer/Twitter_logo.png"></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="./img/footer/Facebook_logo.png"></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="./img/footer/Google_logo.png"></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="./img/footer/Tumbler_logo.png"></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="./img/footer/Pinterest_logo.png"></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="./img/footer/LinkedIn_logo.png"></a>
-                    </li>
-                </ul>
-            </nav>
+    <!--Subscribe-->
+    <!--Footer-->
+    <footer class="footer">
+        <hr>
+        <div class="footer__items">
+            <div class="footer__left-item">
+                <img class="footer__left-logo" src="./img/footer/NewProvidence_logo.png">
+                <p class="footer__left-description">It was some time before he obtained any answer, and the reply, when made, was unpropitious.</p>
+                <img class="footer__left-store" src="./img/footer/apple_store.png">
+                <nav class="footer__social">
+                    <ul class="footer__social-items">
+                        <li>
+                            <a href="#"><img src="./img/footer/Twitter_logo.png"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./img/footer/Facebook_logo.png"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./img/footer/Google_logo.png"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./img/footer/Tumbler_logo.png"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./img/footer/Pinterest_logo.png"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./img/footer/LinkedIn_logo.png"></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__right-items">
+                <div class="footer__right-item">
+                    <h3 class="footer__right-title">learn more</h3>
+                    <a href="#">How it works?</a>
+                    <a href="#">Meeting tools</a>
+                    <a href="#">Live striming</a>
+                    <a href="#">Contat method</a>
+                </div>
+                <div class="footer__right-item">
+                    <h3 class="footer__right-title">About Us</h3>
+                    <a href="#">About us</a>
+                    <a href="#">Features</a>
+                    <a href="#">Privacy police</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+                <div class="footer__right-item">
+                    <h3 class="footer__right-title">support</h3>
+                    <a href="#">F.A.Q.</a>
+                    <a href="#">Contact us</a>
+                    <a href="#">Live chat</a>
+                    <a href="#">Phone call</a>
+                </div>
+            </div>
         </div>
-        <div class="footer__right-items">
-            <div class="footer__right-item">
-                <h3 class="footer__right-title">learn more</h3>
-                <a href="#">How it works?</a>
-                <a href="#">Meeting tools</a>
-                <a href="#">Live striming</a>
-                <a href="#">Contat method</a>
-            </div>
-            <div class="footer__right-item">
-                <h3 class="footer__right-title">About Us</h3>
-                <a href="#">About us</a>
-                <a href="#">Features</a>
-                <a href="#">Privacy police</a>
-                <a href="#">Terms & Conditions</a>
-            </div>
-            <div class="footer__right-item">
-                <h3 class="footer__right-title">support</h3>
-                <a href="#">F.A.Q.</a>
-                <a href="#">Contact us</a>
-                <a href="#">Live chat</a>
-                <a href="#">Phone call</a>
+        <div class="footer__copyrights">
+            <hr>
+            <div class="footer__copyrights-items">
+                <div class="footer__copyrights-link">For more freebies visit: <a href="#">http://getcraftwork.com</a>
+                </div>
+                <div class="footer__copyrights-autor">
+                    <p>Made with Love by</p>
+                    <img src="./img/footer/copyright_logo.png">
+                </div>
             </div>
         </div>
-    </section>
+    </footer>
+    <!--Footer-->
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
