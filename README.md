@@ -12,15 +12,15 @@
 
 
 
-///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////         Use this one
 1. git checkout -b branchName
 2. git add .
-3. git commit -m 'bla'
-4. git ckeckout main
+3. git commit -m 'message'
+4. git checkout main
 5. git pull
 6. git checkout branchName
-6.2 git merge main
-7. resolve confli
+7. git merge main
 8. git add .
-9. git merge --contunue ???????????????
-10. git push -u origin branchName
+9. git commit -m 'message' // if error resolve conflicts and got to point 10
+10. git merge --contunue
+11. git push -u origin branchName
