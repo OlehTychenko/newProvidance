@@ -14,7 +14,13 @@ HAMBURGER_CLOSE.addEventListener('click', () => {
     HAMBURGER_MENU.classList = ('hamburger-menu');
 });
 
-HAMBURGER_ITEMS.addEventListener('click', () => {
+for (let i =0; i < HAMBURGER_ITEMS.length; i++) {
+    HAMBURGER_ITEMS[i].addEventListener('click', () => {
+        HAMBURGER_MENU.classList = ('hamburger-menu');
+    })    
+}
+
+HAMBURGER_ITEMS[0].addEventListener('click', () => {
     HAMBURGER_MENU.classList = ('hamburger-menu');
 })
 

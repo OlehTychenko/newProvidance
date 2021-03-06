@@ -12,7 +12,7 @@
 
 
 
-
+///////////////////////////////////////////////////////////////////////
 1. git checkout -b branchName
 2. git add .
 3. git commit -m 'bla'
@@ -22,5 +22,5 @@
 6.2 git merge main
 7. resolve confli
 8. git add .
-9. git merge --contunue
+9. git merge --contunue ???????????????
 10. git push -u origin branchName
