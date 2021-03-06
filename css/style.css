@@ -1,49 +1,61 @@
 /* lato-300 - latin */
+
 @font-face {
     font-family: 'Lato';
     font-style: normal;
     font-weight: 300;
-    src: local(''),
-         url('../fonts/lato-v17-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/lato-v17-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  /* lato-regular - latin */
-  @font-face {
+    src: local(''), url('../fonts/lato-v17-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/lato-v17-latin-300.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+/* lato-regular - latin */
+
+@font-face {
     font-family: 'Lato';
     font-style: normal;
     font-weight: 400;
-    src: local(''),
-         url('../fonts/lato-v17-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/lato-v17-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  /* lato-700 - latin */
-  @font-face {
+    src: local(''), url('../fonts/lato-v17-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/lato-v17-latin-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+/* lato-700 - latin */
+
+@font-face {
     font-family: 'Lato';
     font-style: normal;
     font-weight: 700;
-    src: local(''),
-         url('../fonts/lato-v17-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/lato-v17-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  /* lato-900 - latin */
-  @font-face {
+    src: local(''), url('../fonts/lato-v17-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/lato-v17-latin-700.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+/* lato-900 - latin */
+
+@font-face {
     font-family: 'Lato';
     font-style: normal;
     font-weight: 900;
-    src: local(''),
-         url('../fonts/lato-v17-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/lato-v17-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
+    src: local(''), url('../fonts/lato-v17-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/lato-v17-latin-900.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 
-  /* varela-round-regular - latin */
+
+/* varela-round-regular - latin */
+
 @font-face {
     font-family: 'Varela Round';
     font-style: normal;
     font-weight: 400;
-    src: local(''),
-         url('../fonts/varela-round-v13-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/varela-round-v13-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
+    src: local(''), url('../fonts/varela-round-v13-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/varela-round-v13-latin-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 
 body {
     color: #26272D;
@@ -51,7 +63,8 @@ body {
     line-height: 1.2;
 }
 
- /* header styles start */
+
+/* header styles start */
 
 .header {
     background: url(../img/header/header_bg.jfif);
@@ -74,7 +87,7 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-.navbar__left-side > li {
+.navbar__left-side>li {
     margin-right: 42px;
 }
 
@@ -87,7 +100,7 @@ body {
     font-weight: 400;
 }
 
-.navbar-title > span {
+.navbar-title>span {
     font-weight: 900;
 }
 
@@ -96,7 +109,7 @@ body {
     align-items: center;
 }
 
-.navbar__right-side > li {
+.navbar__right-side>li {
     margin-left: 30px;
 }
 
@@ -162,9 +175,56 @@ body {
     margin-right: 16px;
 }
 
- /* header styles end */
 
- /* Plan styles start */
+/* header styles end */
+
+
+/* features styles start */
+
+.features {
+    background: #f4f4f5;
+}
+
+.features_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0px auto;
+    padding-top: 122px;
+    max-width: 1168px;
+    padding-bottom: 127px;
+}
+
+.features_block img {
+    width: 2.7em;
+    height: 3.2em;
+    padding-bottom: 45px;
+}
+
+.features h3 {
+    padding-bottom: 28px;
+    font-size: 1.6em;
+    font-family: Lato-Light, AdobeInvisFont, MyriadPro-Regular;
+}
+
+.features p {
+    padding-top: 20px;
+    width: 495px;
+}
+
+.features .features_diviver img {
+    padding-bottom: 42px;
+    padding-left: 12%;
+    padding-right: 12%;
+    width: 76%;
+    text-align: center;
+}
+
+
+/* features styles end */
+
+
+/* Plan styles start */
 
 .plan {
     background: #f4f4f5;
@@ -239,7 +299,7 @@ body {
     font-size: 14px;
 }
 
-.plan-link > a {
+.plan-link>a {
     color: #267DF4;
 }
 
@@ -253,6 +313,7 @@ body {
     height: 512px;
     background: url(../img/plan/plan-item.png);
 }
+
 .plan__item-title {
     margin-bottom: 28px;
     padding-top: 44px;
@@ -275,7 +336,7 @@ body {
     font-size: 11px;
 }
 
-.plan__item-price > p {
+.plan__item-price>p {
     margin: auto;
 }
 
@@ -288,7 +349,8 @@ body {
 .plan__item-options {
     color: #26292C;
     font-size: 16px;
-    height: 170px;   /* need to change this */
+    height: 170px;
+    /* need to change this */
 }
 
 .plan__item-option {
@@ -313,7 +375,9 @@ body {
     border-radius: 30px;
 }
 
- /* Plan styles end */
+
+/* Plan styles end */
+
 
 /* Subscribe styles end */
 
@@ -361,7 +425,7 @@ body {
     font-size: 16px;
 }
 
-.subscribe__field-confirm > a {
+.subscribe__field-confirm>a {
     text-decoration: none;
     color: white;
 }
@@ -372,7 +436,9 @@ body {
     font-size: 14px;
 }
 
+
 /* Subscribe styles end */
+
 
 /* Footer styles end */
 
@@ -412,7 +478,7 @@ body {
     text-transform: uppercase;
 }
 
-.footer__right-item > a {
+.footer__right-item>a {
     margin-bottom: 16px;
     text-decoration: none;
     color: #8C8F94;
@@ -421,5 +487,6 @@ body {
 .footer__right-item:last-child {
     margin-right: 0px;
 }
+
 
 /* Footer styles end */
