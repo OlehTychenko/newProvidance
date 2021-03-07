@@ -475,16 +475,16 @@ body {
 .plan__item {
     width: 342px;
     height: 512px;
-    background: url(../img/plan/plan-item.png);
+    background-color: #ebebed;
     cursor: pointer;
     transition: 0.07s;
 }
 
 .plan__item-focused {
-    background: url(../img/plan/plan-item_focused.png);
+    background-color: white;
     transform: scale(1.1);
     transition: 0.3s;
-    box-shadow: 0px 0px 7px #26272D;
+    box-shadow: 0px 0px 7px #26272d4d;
 }
 
 .plan__item-title {
