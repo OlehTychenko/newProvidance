@@ -385,6 +385,130 @@ body {
 /* Iphone__screens style end */
 
 
+/* Customers start */
+
+.customers__section {
+    background-color: #FFFFFF;
+    background-size: cover;
+    position: relative;
+}
+
+.customers__wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 120px 0 130px 0;
+}
+
+.customers__slider {
+    width: 590px;
+    height: 146px;
+    margin: 0 auto;
+    margin-bottom: 74px;
+    overflow: hidden;
+    border-radius: 200px;
+}
+
+.customers__slides {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+
+
+.customers__slide {
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    top: 28px;
+    transition: all .8s linear;
+    border-radius: 50%;
+    opacity: 0.4;
+
+
+    
+}
+
+
+
+.customers__slide img {
+    display: block;
+    width: 100%;
+    border-radius: 50%;
+
+}
+
+.slide-active {
+    transform: scale(1.6);
+    opacity: 1;
+
+}
+
+
+
+
+.customers__feedback {
+    max-width: 554px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.feedback-title {
+    color: #26272D;
+    font-size: 32px;
+    font-weight: 300;
+    margin-bottom: 48px;
+}
+
+.feedback-quote {
+    color: #8C8F94;
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.feedback-stars {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 68px;
+}
+
+.star-icon:not(:last-child) {
+    margin-right: 8px;
+}
+
+.star-icon img {
+    display: block;
+    width: 100%;
+}
+
+.feedback-name {
+    color: #26272D;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#btn-prev,
+#btn-next {
+    position: absolute;
+    top: 176px;
+    cursor: pointer !important;
+}
+
+#btn-prev {
+    left: 236px
+}
+
+#btn-next {
+    right: 236px
+}
+
+
+/* Customers end */
+
+
 /* Plan styles start */
 
 .plan {
