@@ -445,14 +445,23 @@ body {
 
 }
 
-
-
-
 .customers__feedback {
     max-width: 554px;
     text-align: center;
     margin: 0 auto;
 }
+
+.feedback-item.active {
+    display: block;
+    
+}
+
+.feedback-item {
+    display: none;
+    transition: all 1.4s linear; ;
+}
+
+
 
 .feedback-title {
     color: #26272D;
