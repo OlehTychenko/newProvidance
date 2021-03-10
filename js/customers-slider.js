@@ -1,32 +1,33 @@
-function addActive(elem) {
-    elem.classList.add('slide-active');
-}
-
-function deleteActive(elem) {
-    elem.classList.remove('slide-active');
-}
-
-function changeClass(item) {
+function changeClass(item, feed__item) {
     if (item.style.left == '250px' && item.className != 'slide-active') {
-        addActive(item)
+        item.classList.add('slide-active');
+        
+        feed__item.classList.add('active');
+       
     } else if (item.style.left != '250px' && item.classList.contains('slide-active')) {
-        deleteActive(item)
+        item.classList.remove('slide-active');
+        feed__item.classList.remove('active');
     }  
 }
 
 
-let slid_items = document.querySelectorAll(".customers__slide");
-console.log(slid_items)
+const SLID_ITEMS = document.querySelectorAll(".customers__slide");
+const FEEDBACK_ITEMS = document.querySelectorAll(".feedback-item");
+
+console.log(SLID_ITEMS)
 
 
 function draw() {
     let offset = -1;
-    for (let i = 0; i < slid_items.length; i++) {
-        let item = slid_items[i];
-        item.style.left = offset * 250 + 'px';
+    for (let i = 0; i < SLID_ITEMS.length; i++) {
+        let slid__item = SLID_ITEMS[i];
+        let feedback__item = FEEDBACK_ITEMS[i];
+        slid__item.style.left = offset * 250 + 'px';
         offset++;
-        changeClass(item);
+        changeClass(slid__item, feedback__item);
+        
     }
+  
 
 
 };
@@ -34,13 +35,14 @@ function draw() {
 draw();
 
 function left() {
-    for (let i = 0; i < slid_items.length; i++) {
-        let item = slid_items[i];
+    for (let i = 0; i < SLID_ITEMS.length; i++) {
+        let item = SLID_ITEMS[i];
+        let feedback__item = FEEDBACK_ITEMS[i];
         if (item.style.left == '750px') {
             item.style.zIndex = '0';
         }
         item.style.left = parseInt(item.style.left) - 250 + 'px';
-        changeClass(item);
+        changeClass(item, feedback__item);
 
         if ((parseInt(item.style.left)) < -250) {
             item.style.zIndex = '-1';
@@ -51,15 +53,16 @@ function left() {
 
 function right() {
 
-    for (let i = 0; i < slid_items.length; i++) {
-        let item = slid_items[i];
-        console.log(slid_items)
+    for (let i = 0; i < SLID_ITEMS.length; i++) {
+        let item = SLID_ITEMS[i];
+        let feedback__item = FEEDBACK_ITEMS[i];
+        console.log(SLID_ITEMS)
         if (item.style.left == '-250px') {
             item.style.zIndex = '1';
         }
         console.log(item.style.zIndex)
         item.style.left = parseInt(item.style.left) + 250 + 'px';
-        changeClass(item);
+        changeClass(item, feedback__item);
 
 
         if ((parseInt(item.style.left)) > 750) {
