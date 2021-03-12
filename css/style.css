@@ -263,6 +263,8 @@ font-size: 20px;
 text-transform: uppercase;
 }
 /* header styles end */
+
+
 /* features styles start */
 
 .features {
@@ -285,7 +287,7 @@ height: 3.2em;
 padding-bottom: 45px;
 }
 
-.features h3 {
+.features h4 {
 padding-bottom: 28px;
 font-size: 1.6em;
 font-family: Lato-Light, AdobeInvisFont, MyriadPro-Regular;
@@ -303,7 +305,102 @@ padding-right: 12%;
 width: 76%;
 text-align: center;
 }
-/* features styles end */
+/* / features styles end */
+
+/* iphone__feature styles start */
+
+
+.iphone__feature {
+  background: #f4f4f5;
+}
+
+.iphone__feature__wrapper {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+margin: 0px auto;
+padding-top: 87px;
+/* max-width: 1168px; */
+padding-bottom: 42px;
+}
+
+.iphone__feature-item {
+  padding-left: 0;
+  width: 50%;
+}
+.iphone__feature-item img {
+  padding-left: 0;
+  width: 100%;
+}
+
+.iphone__feature-container {
+  padding-top: 138px;
+  padding-bottom: 191px;
+  padding-right: 219px;
+}
+
+.iphone__feature-text {
+  width: 470px;
+  height: 325px;
+}
+.iphone__feature-text h3 {
+  padding: 52px 0;
+  font-size: 2.63em;
+  font-family: VarelaRound,AdobeInvisFont,MyriadPro-Regular;
+}
+.iphone__feature-text p {
+  padding-top: 20px;
+  font-size: 1.25em;
+  font-family: Lato-Regular,AdobeInvisFont,MyriadPro-Regular;
+}
+
+.iphone__feature__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.iphone__feature__buttons button {
+  margin-top: 74px;
+  margin-right: 18px;
+  
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.iphone__feature__button-try {
+  width: 203px;
+  height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #267DF4;
+  color: #FFFFFF;
+}
+.iphone__feature__button-learn {
+  width: 143px;
+  height: 43px;
+  background: #26272D;
+  /* opacity: 0.1; */
+  color: #26272D;
+}
+.iphone__feature__buttons button a {
+  font-family: "Lato";
+     /* -Regular AdobeInvisFont MyriadPro-Regular;
+  */
+
+  font-size: 1em;
+}
+
+/* / iphone__feature styles end */
+
 /* Iphone__screens style start */
 
 .iphone__screens {
@@ -915,7 +1012,7 @@ margin-right: 10px;
 .features__block img {
   padding-bottom: 20px;
 }
-.features h3 {
+.features h4 {
   padding-bottom: 10px;
 }
 .features p {
