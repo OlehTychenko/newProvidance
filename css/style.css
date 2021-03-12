@@ -385,12 +385,161 @@ body {
 /* Iphone__screens style end */
 
 
+/* Buy */ 
+
+.buy__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 75px;
+    background-color: #F5F5F8;
+}
+
+.buy-title {
+    padding-top: 45px;
+    margin-bottom: 48px;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 42px;
+    color: #26292C;
+}
+
+.buy__suptitle {
+    color: #3A3D4B;
+    opacity: 0.5;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.buy__sub-title {
+    color: #3A3D4B;
+    opacity: 0.3;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.buy__field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 66px;
+    width: 560px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 30px;
+    position: relative;
+}
+
+.buy__arrow-right {
+    
+    position: absolute;
+    top: 16px; 
+    right: 24px;
+}
+
+.buy__field-confirm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 4px;
+    width: 165px;
+    height: 42px;
+    background: #6FC754;
+    border-radius: 30px;
+    transition: 0.3s;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: 'Lato';
+    font-size: 16px;
+}
+
+.buy__field-confirm:hover {
+    background: #26292C;
+}
+
+.buy__field-input {
+    margin-left: 24px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 16px;
+    width: 60%;
+    padding: 15px 0;
+}
+
+.buy__field-confirm>a {
+    text-decoration: none;
+    color: white;
+    margin-right: 32px;
+}
+
+
+.buy-description {
+    margin-bottom: 84px;
+    color: #8C8F94;
+    font-size: 14px;
+
+}
+
+.download__button {
+    padding: 14px 40px 11px 70px;
+    cursor: pointer;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 50px;
+    color: white;
+    outline: none;
+    margin-bottom: 130px;
+    position: relative;
+    transition: all .2 linear;
+}
+
+
+
+.download-title {
+    font-size: 12px ;
+}
+
+.download-subtitle {
+    font-size: 24px;
+}
+
+.download__button:hover {
+    background-color: white;
+    border: 1px solid black;
+    transition: .35s;
+    box-shadow: 0px 0px 3px black;
+    transform: scale(1.1);
+    color: black;
+    font-weight: 900;
+}
+
+.apple-icon {
+    width: 25px;
+    height: 29px;
+    position: absolute;
+    left: 27px;
+    bottom: 18px;
+}
+
+.download__button:hover .apple-icon {
+    filter: brightness(0);
+    transform: scale(1.1);
+}
+
+
+
+
+/* End buy */
+
+
 /* Customers start */
 
 .customers__section {
     background-color: #FFFFFF;
     background-size: cover;
     position: relative;
+    height: 750px;
 }
 
 .customers__wrapper {
@@ -745,6 +894,7 @@ body {
     outline: none;
     color: hsla(210, 7%, 16%, 0.7019607843137254);
     font-size: 16px;
+    width: 60%;
 }
 
 .subscribe__field-confirm>a {
