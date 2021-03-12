@@ -491,7 +491,7 @@ body {
     outline: none;
     margin-bottom: 130px;
     position: relative;
-    transition: all .2 linear;
+    transition: all .3s linear ;
 }
 
 
@@ -507,11 +507,15 @@ body {
 .download__button:hover {
     background-color: white;
     border: 1px solid black;
-    transition: .35s;
-    box-shadow: 0px 0px 3px black;
-    transform: scale(1.1);
+    box-shadow: 0px 0px 15px black;
+    transform: scale3d(1.2);
     color: black;
     font-weight: 900;
+}
+
+.download__button:hover .apple-icon {
+    filter: brightness(0);
+    transform: scale(1.1);
 }
 
 .apple-icon {
@@ -522,10 +526,7 @@ body {
     bottom: 18px;
 }
 
-.download__button:hover .apple-icon {
-    filter: brightness(0);
-    transform: scale(1.1);
-}
+
 
 
 
