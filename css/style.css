@@ -334,7 +334,6 @@ body {
 .iphone__ftr__wrapper>img {
   padding-left: 0;
   width: 50%;
-
 }
 
 .iphone__ftr-container {
@@ -438,6 +437,62 @@ body {
 }
 
 /* / iphone__feature styles end */
+
+
+
+/* Map__feature start*/
+
+
+.map__feature {
+  background: #f4f4f5;
+}
+
+.map__ftr__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding-top: 207px;
+  padding-bottom: 199px;
+}
+
+.map__ftr-text {
+  width: 28%;
+  padding-left: 12%;
+  height: auto;
+}
+.map__ftr-text h3 {
+  width: 280px;
+  padding-bottom: 54px;
+  font-size: 2.63em;
+  font-weight: 400;
+  font-family: "VarelaRound", "AdobeInvisFont", "MyriadPro";
+}
+
+.map__ftr-text p {
+  padding-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.25em;
+  font-weight: 400;
+  font-family: "Lato", "AdobeInvisFont", "MyriadPro";
+}
+.map__ftr-partners>p {
+  font-size: 0.75em;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.map__ftr-dropbox {
+  /* width: 125px; */
+  padding-right: 1.9em;
+}
+
+.map__ftr__wrapper>img {
+  width: 55%;
+}
+
+
+/* / Map__feature end */
+
 
 /* Iphone__screens style start */
 
@@ -1126,7 +1181,6 @@ body {
 
   .iphone__ftr__wrapper>img {
     width: 45%;
-
   }
 
   .iphone__ftr-container {
@@ -1144,6 +1198,33 @@ body {
   .navbar__container {
     padding: 44px 25px 0px;
   }
+
+  .map__ftr__wrapper {
+    justify-content: center;
+    margin: 0;
+    padding-top: 103px;
+    padding-bottom: 98px;
+  }
+
+  .map__ftr-text {
+    width: 75%;
+    padding: 0 0 100px;
+    text-align: center;
+  }
+  .map__ftr-text h3 {
+    width: auto;
+    padding-bottom: 34px;
+  }
+
+  .map__ftr-text p {
+    padding-top: 10px;
+    margin-bottom: 10px;
+  }
+
+.map__ftr__wrapper>img {
+  width: 85%;
+  text-align: center;
+}
 
   .plan__wrapper {
     flex-direction: column;
@@ -1341,6 +1422,16 @@ body {
       margin: 5% 0;
     }
     
+    .map__ftr-logos {
+      display: inline-flexbox;
+      text-align: center;
+      padding: 0 20%;
+    }
+
+    .map__ftr-dropbox {
+      padding: 0 0 1em;
+    }
+
     .plan__item {
       width: 350px;
     }
