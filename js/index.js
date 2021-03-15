@@ -1,13 +1,13 @@
 // Hamburger
 
 const anchors = document.querySelectorAll('a[href^="#"]')
-
 // Цикл по всем ссылкам
 for(let anchor of anchors) {
   anchor.addEventListener("click", function(e) {
     e.preventDefault() // Предотвратить стандартное поведение ссылок
     // Атрибут href у ссылки, если его нет то перейти к body (наверх не плавно)
-    const goto = anchor.hasAttribute('href') ? anchor.getAttribute('href') : 'body'
+    console.log(anchor.href.length)
+    const goto = anchor.hasAttribute('href') && anchor.href.length > 1 ? anchor.getAttribute('href') : 'body'
     // Плавная прокрутка до элемента с id = href у ссылки
     document.querySelector(goto).scrollIntoView({
       behavior: "smooth",
@@ -20,8 +20,8 @@ const HAMBURGER = document.getElementById('hamburger');
 const HAMBURGER_MENU = document.getElementById('hamburger_menu');
 const HAMBURGER_CLOSE = document.getElementById('hamburger_close');
 const HAMBURGER_ITEMS = document.getElementsByClassName('hamb__item');
-console.log(HAMBURGER_ITEMS)
-
+const HAMBURGER_BUTTON = document.getElementsByClassName('navbar__button')
+console.log(HAMBURGER_BUTTON);
 HAMBURGER.addEventListener('click', () => {
     HAMBURGER_MENU.classList = ('hamburger-menu show');
 });
@@ -40,7 +40,22 @@ HAMBURGER_ITEMS[0].addEventListener('click', () => {
     HAMBURGER_MENU.classList = ('hamburger-menu');
 })
 
+for (let i =0; i < HAMBURGER_BUTTON.length; i++) {
+    HAMBURGER_BUTTON[i].addEventListener('click', () => {
+        HAMBURGER_MENU.classList = ('hamburger-menu');
+    })    
+}
+
 // Hamburger
+
+// Toggle for navbar
+
+window.addEventListener('scroll', () => {
+    const NAVBAR_CONTAINER = document.getElementsByClassName('navbar');
+    NAVBAR_CONTAINER[0].classList.toggle('sticky', window.scrollY > 50);
+})
+
+// Toggle for navbar
 
 // Add toggle fucntion for changing classes in plan section
 
