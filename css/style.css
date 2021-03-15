@@ -67,20 +67,31 @@ body {
 
 /* header styles start */
 
-.header {
+header {
   background: url(../img/header/header_bg.jfif);
   background-size: cover;
+}
+
+.navbar {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  transition: 0.3s;
+  z-index: 1;
 }
 
 .navbar__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0px auto 116px;
-  padding-top: 44px;
+  margin: 36px auto;
   max-width: 1168px;
   font-size: 16px;
   text-transform: capitalize;
+}
+
+.sticky {
+  background: #f6f6f6;
 }
 
 .navbar__container a {
@@ -138,31 +149,34 @@ body {
   border-radius: 30px;
   color: white;
   outline: none;
+  transition: 0.3s;
 }
 
 .navbar__button-description {
-  padding-left: 25px;
-  background: url(../img/header/apple_button.png);
-  background-repeat: no-repeat;
-  background-size: contain;
+  padding-left: 10px;
   color: white;
   font-size: 16px;
   text-transform: capitalize;
   font-family: "Lato", sans-serif;
+  transition: 0.3s;
 }
 
 .navbar__button:hover {
   background-color: white;
   border: 1px solid #267df4;
-  transition: 0.25s;
   box-shadow: 0px 0px 3px #267df4;
 }
 
 .navbar__button:hover .navbar__button-description {
-  background: url(../img/header/apple_button-blue.png);
-  background-repeat: no-repeat;
-  background-size: contain;
   color: #267df4 !important;
+}
+
+.navbar__button > svg > path {
+  transition: 0.3s;
+}
+
+.navbar__button:hover > svg > path {
+  fill: #267df4;
 }
 
 .intro__container {
@@ -170,6 +184,7 @@ body {
   flex-direction: column;
   align-items: center;
   margin: 0px auto;
+  padding-top: 200px;
   max-width: 780px;
 }
 
@@ -212,19 +227,19 @@ body {
   border-radius: 30px;
   font-size: 16px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .intro-button-icon {
   margin-right: 16px;
+  transition: 0.3s;
 }
 
 .intro-button:hover {
   border: 1px solid #26272d;
-  transition: 0.25s;
 }
 
 .intro-button:hover .intro-button-icon {
-  transition: 0.25s;
   padding-left: 10px;
 }
 
@@ -235,6 +250,7 @@ body {
   cursor: pointer;
   outline: none;
   display: none;
+  transition: 0.3s;
 }
 
 .hamburger-menu {
@@ -262,11 +278,20 @@ body {
   font-size: 24px;
 }
 
+.hamburger:hover {
+  transform: rotateZ(90deg);
+}
+
 .hamburger-menu a {
   color: #26272d;
   text-decoration: none;
   font-size: 20px;
   text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.hamburger-menu li:hover a {
+  color: #8c8f94;
 }
 
 /* header styles end */
@@ -911,6 +936,11 @@ body {
 
 .plan-link>a {
   color: #267df4;
+  transition: 0.25s;
+}
+
+.plan-link>a:hover {
+  color: #26272d;
 }
 
 .plan__items {
@@ -1053,7 +1083,7 @@ body {
   margin-left: 24px;
   border: none;
   outline: none;
-  color: hsla(210, 7%, 16%, 0.019607843137254);
+  color: #8c8f94;
   font-size: 16px;
   width: 60%;
 }
@@ -1108,6 +1138,14 @@ body {
   align-items: center;
 }
 
+.footer__svg {
+  transition: 0.25s;
+}
+
+.footer__social-items a:hover .footer__svg {
+  fill: #267df4;
+}
+
 .footer__right-items {
   display: flex;
   justify-content: space-around;
@@ -1130,6 +1168,7 @@ body {
   margin-bottom: 16px;
   text-decoration: none;
   color: #8c8f94;
+  transition: 0.25s;
 }
 
 .footer__right-item:last-child {
@@ -1196,7 +1235,7 @@ body {
 
 @media screen and (max-width: 1200px) {
   .navbar__container {
-    padding: 44px 25px 0px;
+    padding: 0px 25px;
   }
 
   .map__ftr__wrapper {
@@ -1472,7 +1511,7 @@ body {
     }
 
     .subscribe__field-input {
-      width: 50% !important;
+      width: 50%;
     }
 
     .footer__right-items {
