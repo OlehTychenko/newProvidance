@@ -12,23 +12,23 @@
 
 <body>
     <!-- Header -->
-    <header>
-        <div class="navbar" id="home">
+    <header id="home">
+        <div class="navbar">
             <div class="navbar__container">
                 <button id="hamburger" class="hamburger">☰</button>
                 <ul class="navbar__left-side">
                     <li><a href="#home">tour</a></li>
                     <li><a href="#features">features</a></li>
-                    <li><a href="#">pricing</a></li>
+                    <li><a href="#pricing">pricing</a></li>
                 </ul>
                 <div class="navbar__center">
                     <h1 class="navbar-title"><span>new</span>providance</h1>
                 </div>
                 <ul class="navbar__right-side">
-                    <li><a href="#">help</a></li>
-                    <li><a href="#">contacts</a></li>
+                    <li><a href="#customers">help</a></li>
+                    <li><a href="#contacts">contacts</a></li>
                     <li>
-                        <button onclick="location.href='#'" type="button" class="navbar__button">
+                        <button onclick="location.href='#buy__section'" type="button" class="navbar__button">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                 width="17px" height="21px">
                                 <path fill-rule="evenodd" fill="rgb(255, 255, 255)"
@@ -44,13 +44,13 @@
         <div id="hamburger_menu" class="hamburger-menu">
             <ul>
                 <li><button id="hamburger_close" class="hamburger">X</button></li>
-                <li><a class="hamb__item" href="#tour">tour</a></li>
+                <li><a class="hamb__item" href="#home">tour</a></li>
                 <li><a class="hamb__item" href="#features">features</a></li>
                 <li><a class="hamb__item" href="#pricing">pricing</a></li>
-                <li><a class="hamb__item" href="#help">help</a></li>
+                <li><a class="hamb__item" href="#customers">help</a></li>
                 <li><a class="hamb__item" href="#contacts">contacts</a></li>
                 <li>
-                    <button onclick="location.href='#'" type="button" class="navbar__button">
+                    <button onclick="location.href='#buy__section'" type="button" class="navbar__button">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17px"
                             height="21px">
                             <path fill-rule="evenodd" fill="rgb(255, 255, 255)"
@@ -67,7 +67,7 @@
             <p class="intro-description">The sight of the tumblers restored Bob Sawyer to a degree of equanimity which
                 he had not possessed since his interview with his landlady. His face brightened up, and he began to feel
                 quite convivial.</p>
-            <a class="intro-button">
+            <a href="#iphone__ftr" class="intro-button">
                 <img class="intro-button-icon" src="./img/header/play_icon.png" alt="play_icon">
                 <p>Watch video</p>
             </a>
@@ -112,7 +112,7 @@
 
     <!-- Iphone Feature -->
 
-    <section class="iphone__feature">
+    <section class="iphone__feature" id = "iphone__ftr">
 
         <div class="iphone__ftr__wrapper">
             <!-- <img src="img/iphone-feature/iPhone.png" alt="iPhone_photo"> -->
@@ -243,7 +243,7 @@
     <!--Buy section-->
     <!--Customers-->
 
-    <section id="custome    rs" class="customers__section">
+    <section id="customers" class="customers__section">
         <div class="customers__wrapper">
             <div class="customers__slider">
                 <div class="customers__slides">
@@ -570,24 +570,24 @@
             <div class="footer__right-items">
                 <div class="footer__right-item">
                     <h3 class="footer__right-title">learn more</h3>
-                    <a href="#">How it works?</a>
-                    <a href="#">Meeting tools</a>
-                    <a href="#">Live striming</a>
-                    <a href="#">Contat method</a>
+                    <a href="#home">How it works?</a>
+                    <a href="#home">Meeting tools</a>
+                    <a href="#home">Live striming</a>
+                    <a href="#home">Contat method</a>
                 </div>
                 <div class="footer__right-item">
                     <h3 class="footer__right-title">About Us</h3>
-                    <a href="#">About us</a>
-                    <a href="#">Features</a>
-                    <a href="#">Privacy police</a>
-                    <a href="#">Terms & Conditions</a>
+                    <a href="#home">About us</a>
+                    <a href="#home">Features</a>
+                    <a href="#home">Privacy police</a>
+                    <a href="#home">Terms & Conditions</a>
                 </div>
                 <div class="footer__right-item">
                     <h3 class="footer__right-title">support</h3>
-                    <a href="#">F.A.Q.</a>
-                    <a href="#">Contact us</a>
-                    <a href="#">Live chat</a>
-                    <a href="#">Phone call</a>
+                    <a href="#home">F.A.Q.</a>
+                    <a href="#home">Contact us</a>
+                    <a href="#home">Live chat</a>
+                    <a href="#home">Phone call</a>
                 </div>
             </div>
         </div>
