@@ -77,7 +77,7 @@ header {
   left: 0px;
   right: 0px;
   transition: 0.3s;
-  z-index: 4;
+  z-index: 10;
 }
 
 .navbar__container {
@@ -273,7 +273,7 @@ header {
   align-items: initial;
   justify-content: center;
   position: fixed;
-  z-index: 5;
+  z-index: 11;
   height: 100vh;
   width: 100%;
   top: 0;
@@ -1124,6 +1124,7 @@ margin: 0 auto
   cursor: pointer;
   font-family: "Lato";
   font-size: 16px;
+  color: white;
 }
 
 .subscribe__field-confirm:hover {
@@ -1677,30 +1678,7 @@ margin: 0 auto
     #btn-next {
       right: 30px;
     }
-
-   
-}
-
-@media screen and (max-width: 370px) {
-  .iphone_image {
-    width: 360px;
-  }
-}
-
-@media screen and (max-width: 350px) {
-  .iphone_image {
-    width: 345px;
-  }
-}
-
-@media screen and (max-width: 335px) {
-  .iphone_image {
-    width: 320px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .iphone_image {
-    width: 315px;
-  }
+    .iphone_image {
+      width: 100%;
+    }
 }

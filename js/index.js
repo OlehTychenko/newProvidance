@@ -21,7 +21,6 @@ const HAMBURGER_MENU = document.getElementById('hamburger_menu');
 const HAMBURGER_CLOSE = document.getElementById('hamburger_close');
 const HAMBURGER_ITEMS = document.getElementsByClassName('hamb__item');
 const HAMBURGER_BUTTON = document.getElementsByClassName('navbar__button')
-console.log(HAMBURGER_BUTTON);
 HAMBURGER.addEventListener('click', () => {
     HAMBURGER_MENU.classList = ('hamburger-menu show');
 });
@@ -103,3 +102,28 @@ STARTER.onclick = CHANGE_STARTER_FOCUS;
 PRO.onclick = CHANGE_PRO_FOCUS;
 
 // Add toggle fucntion for changing classes in plan section (cards)
+
+// Form request
+
+const SUBSCRIBE_INPUT = document.getElementsByClassName('subscribe__field-input');
+const SUBSCRIBE_BUTTON = document.getElementsByClassName('subscribe__field-confirm');
+
+let subscribeValue = '';
+
+SUBSCRIBE_INPUT[0].addEventListener('input', () => subscribeValue = SUBSCRIBE_INPUT[0].value);
+
+SUBSCRIBE_BUTTON[0].addEventListener('onsubmit', e => {
+    e.preventDefault();
+    console.log(subscribeValue)
+    // let prom = new Promise ((resolve, reject) => {
+    //     subscribeValue !== undefined ? resolve(subscribeValue)
+    //     :'';
+    // }
+    // ).then (data => console.log({
+    //     email: data,
+    //     number: Math.random()
+    // }));
+
+})
+
+// Form request
