@@ -34,7 +34,7 @@ function draw() {
 
 draw();
 
-function left() {
+function right() {
     for (let i = 0; i < SLID_ITEMS.length; i++) {
         let item = SLID_ITEMS[i];
         let feedback__item = FEEDBACK_ITEMS[i];
@@ -54,7 +54,7 @@ function left() {
     };
 }
 
-function right() {
+function left() {
 
     for (let i = 0; i < SLID_ITEMS.length; i++) {
         let item = SLID_ITEMS[i];
