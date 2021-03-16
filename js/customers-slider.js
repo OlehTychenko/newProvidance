@@ -41,11 +41,14 @@ function left() {
         if (item.style.left == '750px') {
             item.style.zIndex = '0';
         }
+        item.style.transition = "all .8s linear";
+
         item.style.left = parseInt(item.style.left) - 250 + 'px';
         changeClass(item, feedback__item);
 
         if ((parseInt(item.style.left)) < -250) {
             item.style.zIndex = '-1';
+            item.style.transition = "none";
             item.style.left = 750 + 'px';
         };
     };
@@ -60,6 +63,7 @@ function right() {
         if (item.style.left == '-250px') {
             item.style.zIndex = '1';
         }
+        item.style.transition = "all .8s linear";
         console.log(item.style.zIndex)
         item.style.left = parseInt(item.style.left) + 250 + 'px';
         changeClass(item, feedback__item);
@@ -67,6 +71,7 @@ function right() {
 
         if ((parseInt(item.style.left)) > 750) {
             item.style.zIndex = '-1';
+            item.style.transition = "none";
             item.style.left = -250 + 'px';
         };
 

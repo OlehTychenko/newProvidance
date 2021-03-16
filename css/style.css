@@ -524,11 +524,13 @@ header {
 .iphone__screens {
   background-color: #f5f5f8;
   background-size: cover;
+  padding:1vw 0;
 }
 
 .iphone__screens-container {
-  padding-top: 142px;
-  padding-bottom: 122px;
+  margin-top: 142px;
+  margin-bottom: 122px;
+  position: relative;
 }
 
 .iphone__screens-name {
@@ -552,7 +554,7 @@ header {
 }
 
 .iphone__screens-subtitle {
-  margin-bottom: 46px;
+  margin-bottom: 10%;
   font-family: "Lato";
   font-style: normal;
   font-weight: 900;
@@ -566,23 +568,65 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
   max-width: 100%;
-  width: 100%;
+  width: 150%;
+  height: 750px;
+  position: relative;
   overflow: hidden;
 }
 
 .iphone__slider-item {
-  margin-right: 28px;
+ width: 330px;
+  margin: 0 2%;
   box-shadow: 0px 0px 35px #8c8f94;
 }
 
 .iphone__slider-item-iphone {
+  width: 20%;
   box-shadow: none;
 }
 
-.iphone__slider-item:last-child {
-  margin-right: 0px;
+
+.iphone__slider-item>img{
+  display: block;
 }
+
+.iphone__slider{
+  position: relative;
+}
+
+.iphone_image {
+  position: absolute;
+  width: 369px;
+  height: 746px;
+  top: 0.4%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+#btn-prev2 {
+  position: absolute;
+  top: 670px;
+  left: 40%;
+  z-index: 4;
+}
+
+
+
+#btn-next2 {
+  position: absolute;
+  top: 670px;
+  left: 57.5%;
+  z-index: 4;
+
+}
+
+#btn-next2, #btn-prev2 {
+  cursor: pointer !important;
+}
+
 
 /* Iphone__screens style end */
 
@@ -599,6 +643,7 @@ header {
 
 .buy-title {
   padding-top: 45px;
+  text-align: center;
   margin-bottom: 48px;
   font-family: 'Varela Round', sans-serif;
   font-size: 42px;
@@ -787,7 +832,9 @@ header {
 .slide-active {
   transform: scale(1.6);
   opacity: 1;
+
 }
+
 
 .customers__feedback {
   max-width: 554px;
@@ -1301,6 +1348,15 @@ header {
   .footer__copyrights-items {
     margin: 26px 15px;
   }
+ 
+  
+  #btn-prev {
+    left: 385px;
+  }
+  
+  #btn-next {
+    right: 385px;
+
 }
 
 @media screen and (max-width: 992px) {
@@ -1411,6 +1467,17 @@ header {
     margin: 10% 0;
   }
 
+ 
+
+#btn-prev {
+  left: 236px;
+}
+
+#btn-next {
+  right: 236px;
+}
+}
+
   @media screen and (max-width: 820px) {
     .footer__items {
       flex-direction: column;
@@ -1428,6 +1495,17 @@ header {
   }
 
   @media screen and (max-width: 768px) {
+    .customers__slider {
+      width: 110px;
+      height: 110px;
+    }
+
+    .customers__slide {
+      top: 0;
+      width: 110px;
+      height: 110px;
+    }
+    
     .plan-description {
       margin: 0px 20px 44px;
     }
@@ -1446,9 +1524,19 @@ header {
       text-align: center;
     }
 
-    .subscribe__field {
+    .subscribe__field, .buy__field {
       width: 320px;
     }
+
+    #btn-prev {
+      left: 180px;
+    }
+    
+    #btn-next {
+      right: 180px;
+    }
+
+
   }
 
   @media screen and (max-width: 576px) {
@@ -1487,6 +1575,13 @@ header {
     .footer__copyrights-link {
       margin-bottom: 20px;
     }
+    #btn-prev {
+      left: 130px;
+    }
+    
+    #btn-next {
+      right: 130px;
+    }
   }
 
   @media screen and (max-width: 410px) {
@@ -1521,6 +1616,14 @@ header {
     .footer__right-item {
       margin-right: 0px;
       margin-bottom: 20px;
+    }
+
+    #btn-prev {
+      left: 90px;
+    }
+    
+    #btn-next {
+      right: 90px;
     }
   }
 }
