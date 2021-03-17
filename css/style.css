@@ -395,7 +395,7 @@ header {
 }
 
 .iphone__ftr-img {
-  background: url(../img/iphone-feature/iphone-feature-big-img.png) center no-repeat;
+  background: url(../img/iphone-feature/iphone_feature.png) center no-repeat;
   background-size: contain;
   height: 772px;
   width: 810px;
@@ -1255,7 +1255,12 @@ header {
 
 .footer__left-store {
   margin-bottom: 42px;
+  transition: 0.2s;
 }
+
+.footer__left-store:hover {
+  transform: scale(1.1);
+} 
 
 .footer__social-items {
   display: flex;
