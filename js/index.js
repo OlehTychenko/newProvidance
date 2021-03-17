@@ -2,18 +2,18 @@
 
 const anchors = document.querySelectorAll('a[href^="#"]')
 // Цикл по всем ссылкам
-for(let anchor of anchors) {
-  anchor.addEventListener("click", function(e) {
-    e.preventDefault() // Предотвратить стандартное поведение ссылок
-    // Атрибут href у ссылки, если его нет то перейти к body (наверх не плавно)
-    console.log(anchor.href.length)
-    const goto = anchor.hasAttribute('href') && anchor.href.length > 1 ? anchor.getAttribute('href') : 'body'
-    // Плавная прокрутка до элемента с id = href у ссылки
-    document.querySelector(goto).scrollIntoView({
-      behavior: "smooth",
-      block: "start"
+for (let anchor of anchors) {
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault() // Предотвратить стандартное поведение ссылок
+        // Атрибут href у ссылки, если его нет то перейти к body (наверх не плавно)
+        console.log(anchor.href.length)
+        const goto = anchor.hasAttribute('href') && anchor.href.length > 1 ? anchor.getAttribute('href') : 'body'
+        // Плавная прокрутка до элемента с id = href у ссылки
+        document.querySelector(goto).scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        })
     })
-  })
 }
 
 const HAMBURGER = document.getElementById('hamburger');
@@ -29,20 +29,20 @@ HAMBURGER_CLOSE.addEventListener('click', () => {
     HAMBURGER_MENU.classList = ('hamburger-menu');
 });
 
-for (let i =0; i < HAMBURGER_ITEMS.length; i++) {
+for (let i = 0; i < HAMBURGER_ITEMS.length; i++) {
     HAMBURGER_ITEMS[i].addEventListener('click', () => {
         HAMBURGER_MENU.classList = ('hamburger-menu');
-    })    
+    })
 }
 
 HAMBURGER_ITEMS[0].addEventListener('click', () => {
     HAMBURGER_MENU.classList = ('hamburger-menu');
 })
 
-for (let i =0; i < HAMBURGER_BUTTON.length; i++) {
+for (let i = 0; i < HAMBURGER_BUTTON.length; i++) {
     HAMBURGER_BUTTON[i].addEventListener('click', () => {
         HAMBURGER_MENU.classList = ('hamburger-menu');
-    })    
+    })
 }
 
 // Hamburger
@@ -106,24 +106,35 @@ PRO.onclick = CHANGE_PRO_FOCUS;
 // Form request
 
 const SUBSCRIBE_INPUT = document.getElementsByClassName('subscribe__field-input');
-const SUBSCRIBE_BUTTON = document.getElementsByClassName('subscribe__field-confirm');
+const SUBSCRIBE_BUTTON = document.getElementsByClassName('subscribe__field');
 
 let subscribeValue = '';
+let subId = 1;
 
 SUBSCRIBE_INPUT[0].addEventListener('input', () => subscribeValue = SUBSCRIBE_INPUT[0].value);
 
-SUBSCRIBE_BUTTON[0].addEventListener('onsubmit', e => {
+SUBSCRIBE_BUTTON[0].onsubmit = e => {
     e.preventDefault();
-    console.log(subscribeValue)
-    // let prom = new Promise ((resolve, reject) => {
-    //     subscribeValue !== undefined ? resolve(subscribeValue)
-    //     :'';
-    // }
-    // ).then (data => console.log({
-    //     email: data,
-    //     number: Math.random()
-    // }));
-
-})
+    function validateEmail(em) {
+        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(em).toLowerCase());
+    }
+    if (validateEmail(subscribeValue)) {
+        let subData = {
+            email: subscribeValue,
+            id: subId
+        };
+        alert(JSON.stringify(subData));
+        fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'post',
+            body: JSON.stringify(subData)
+        }).then(res => console.log(res))
+            .then(() => {
+                console.log('Fetch method is done');
+                subId++;
+            })
+            .catch(error => console.log(error))
+    } else console.log('Wrong email adress (example: something@gmail.com)');
+};
 
 // Form request
