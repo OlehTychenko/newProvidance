@@ -131,6 +131,7 @@ GETAPP_BUTTON[0].onsubmit = e => {
             .then(() => {
                 console.log('Fetch method is done');
                 subId++;
+                GETAPP_INPUT[0].value = '';
             })
             .catch(error => console.log(error))
     } else console.log('Wrong email adress (example: something@gmail.com)');
@@ -167,6 +168,7 @@ SUBSCRIBE_BUTTON[0].onsubmit = e => {
             .then(() => {
                 console.log('Fetch method is done');
                 subId++;
+                SUBSCRIBE_INPUT[0].value = '';
             })
             .catch(error => console.log(error))
     } else console.log('Wrong email adress (example: something@gmail.com)');

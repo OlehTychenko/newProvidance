@@ -21,7 +21,6 @@ const star = (rating, quantity) => {
           const ratio = Math.round((1 - (i - rating)) * 100);
           const percent = `${ratio}%`;
           const id = `widgetGrad${i}`;
-          console.log(percent);
           let x1 = document.createElement("div");
           x1.innerHTML = `<svg viewBox="0 0 51 48" width="10px" height="10px">
             <defs>
@@ -62,12 +61,3 @@ const star = (rating, quantity) => {
   for (let i = 0; i< items.length; i++) {
       div2[i].appendChild(star(items[i].getAttribute("rating"), 5))
   }
-
- 
-
-
-
-
-
-
-  console.log(items[4].getAttribute("rating"))
