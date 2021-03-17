@@ -14,8 +14,6 @@ function changeClass(item, feed__item) {
 const SLID_ITEMS = document.querySelectorAll(".customers__slide");
 const FEEDBACK_ITEMS = document.querySelectorAll(".feedback-item");
 
-
-
 function draw() {
     let offset = -1;
     for (let i = 0; i < SLID_ITEMS.length; i++) {
