@@ -22,26 +22,31 @@ const HAMBURGER_CLOSE = document.getElementById('hamburger_close');
 const HAMBURGER_ITEMS = document.getElementsByClassName('hamb__item');
 const HAMBURGER_BUTTON = document.getElementsByClassName('navbar__button')
 HAMBURGER.addEventListener('click', () => {
+    HAMBURGER.style.visibility = 'hidden';
     HAMBURGER_MENU.classList = ('hamburger-menu show');
 });
 
 HAMBURGER_CLOSE.addEventListener('click', () => {
     HAMBURGER_MENU.classList = ('hamburger-menu');
+    setTimeout(HAMBURGER.style.visibility = 'initial', 1000);
 });
 
 for (let i = 0; i < HAMBURGER_ITEMS.length; i++) {
     HAMBURGER_ITEMS[i].addEventListener('click', () => {
         HAMBURGER_MENU.classList = ('hamburger-menu');
+        setTimeout(HAMBURGER.style.visibility = 'initial', 1000);
     })
 }
 
 HAMBURGER_ITEMS[0].addEventListener('click', () => {
     HAMBURGER_MENU.classList = ('hamburger-menu');
+    setTimeout(HAMBURGER.style.visibility = 'initial', 1000);
 })
 
 for (let i = 0; i < HAMBURGER_BUTTON.length; i++) {
     HAMBURGER_BUTTON[i].addEventListener('click', () => {
         HAMBURGER_MENU.classList = ('hamburger-menu');
+        setTimeout(HAMBURGER.style.visibility = 'initial', 1000);
     })
 }
 

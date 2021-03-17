@@ -290,7 +290,15 @@ header {
   cursor: pointer;
   outline: none;
   display: none;
-  transition: 0.3s;
+}
+
+.hamburger > img {
+  width: 30px;
+  transition: 0.1s;
+}
+
+.hamburger > img:hover {
+  transform: scale(1.1);
 }
 
 .hamburger-menu {
@@ -316,10 +324,6 @@ header {
   padding-top: 15px;
   text-align: center;
   font-size: 24px;
-}
-
-.hamburger:hover {
-  transform: rotateZ(90deg);
 }
 
 .hamburger-menu a {
