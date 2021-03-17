@@ -953,6 +953,17 @@ header {
   text-transform: uppercase;
 }
 
+.rating_wrapper{
+  width:200px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.rating_wrapper>div>svg{
+  width: 35px;
+  height: 35px;
+}
+
 #btn-prev,
 #btn-next {
   position: absolute;
