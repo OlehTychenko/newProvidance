@@ -65,6 +65,30 @@ body {
   line-height: 1.2;
 }
 
+#p_prldr {
+position: fixed;
+left: 0;
+top: 0;
+right: 0;
+bottom: 0;
+background: #000000;
+z-index: 30;
+}
+
+.spinner-border {
+position: absolute;
+display: flex;
+justify-content: center;
+align-items: center;left: 0;
+top: 0;
+right: 0;
+bottom: 0;
+}
+
+.spinner-border > img {
+  width: 150px;
+}
+
 /* header styles start */
 
 header {
