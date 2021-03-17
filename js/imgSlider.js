@@ -66,7 +66,6 @@ const iphoneImages = [
         iphoneImgBorder.setAttribute("class", "iphone_image");
         iphoneBlock.setAttribute("style", "margin: 0 5%");
         iphoneBlock.appendChild(iphoneImgBorder);
-        let hiddenBlock = document.createElement("div");
       
       }
       let iphoneImg = document.createElement("img");
