@@ -437,16 +437,20 @@ header {
 }
 
 .iphone__ftr__btn-try:hover a {
-  color: #267df4
+  color: #267df4;
 }
 
 .iphone__ftr__btn-try:active {
-  background-color: #26272D;
-  color: white;
+  background-color: #2f3341;
+  color: #fff;
 }
 
 .iphone__ftr__btn-try a {
   color: #FFFFFF;
+}
+
+.iphone__ftr__btn-try:active a {
+  color: #fff;
 }
 
 .iphone__ftr__btn-learn {
@@ -460,14 +464,19 @@ header {
 
 .iphone__ftr__btn-learn:hover {
   box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
 }
 
 .iphone__ftr__btn-learn:active {
-  background-color: #d9d9e8;
+  /* background-color: #d9d9e8; */
+  background-color: #2f3341;
 }
 
 .iphone__ftr__btn-learn a {
   color: #26272D;
+}
+.iphone__ftr__btn-learn:active a {
+  color: #fff;
 }
 
 /* / iphone__feature styles end */
