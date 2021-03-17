@@ -294,11 +294,11 @@ header {
 
 .hamburger > img {
   width: 30px;
-  transition: 0.1s;
+  transition: 0.25s;
 }
 
 .hamburger > img:hover {
-  transform: scale(1.1);
+  transform: rotateZ(90deg);
 }
 
 .hamburger-menu {
@@ -456,13 +456,29 @@ header {
   justify-content: space-between;
   background: #267DF4;
   border: none;
+}
 
+.ftr-arrow {
+  display: flex;
+  align-items: center;
+}
+
+.ftr-svg__wrap {
+  display: flex;
+  align-items: center;
+}
+
+.ftr-svg {
+  fill: white;
 }
 
 .iphone__ftr__btn-try:hover {
   box-shadow: 1px 5px 5px 1px #267df4;
   background-color: white;
-  border: 1px solid #267df4;
+}
+
+.iphone__ftr__btn-try:hover .ftr-svg {
+  fill: #267df4;
 }
 
 .iphone__ftr__btn-try:hover a {
@@ -472,6 +488,10 @@ header {
 .iphone__ftr__btn-try:active {
   background-color: #2f3341;
   color: #fff;
+}
+
+.iphone__ftr__btn-try:active .ftr-svg {
+  fill: white;
 }
 
 .iphone__ftr__btn-try a {
@@ -497,7 +517,6 @@ header {
 }
 
 .iphone__ftr__btn-learn:active {
-  /* background-color: #d9d9e8; */
   background-color: #2f3341;
 }
 
@@ -733,32 +752,26 @@ header {
   position: relative;
 }
 
-.buy__arrow-right {
-
-  position: absolute;
-  top: 16px;
-  right: 24px;
-}
-
 .buy__field-confirm {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 4px;
-  width: 165px;
+  margin-right: 5px;
+  width: 134px;
   height: 42px;
-  background: #6FC754;
+  background: #6fc754;
   border-radius: 30px;
   transition: 0.3s;
   border: none;
   outline: none;
   cursor: pointer;
-  font-family: 'Lato';
+  font-family: "Lato";
   font-size: 16px;
+  color: white;
 }
 
 .buy__field-confirm:hover {
-  background: #26292C;
+  background: #26292c;
 }
 
 .buy__field-input {
@@ -1314,6 +1327,14 @@ header {
 .footer__divider>img {
   max-width: 1171px;
   width: 100%;
+}
+
+.footer__copyrights-svg {
+  transition: 0.1s;
+}
+
+.footer__copyrights-svg:hover {
+  fill: #267df4;
 }
 
 /* Footer styles end */

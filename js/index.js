@@ -6,7 +6,6 @@ for (let anchor of anchors) {
     anchor.addEventListener("click", function (e) {
         e.preventDefault() // Предотвратить стандартное поведение ссылок
         // Атрибут href у ссылки, если его нет то перейти к body (наверх не плавно)
-        console.log(anchor.href.length)
         const goto = anchor.hasAttribute('href') && anchor.href.length > 1 ? anchor.getAttribute('href') : 'body'
         // Плавная прокрутка до элемента с id = href у ссылки
         document.querySelector(goto).scrollIntoView({
@@ -22,31 +21,31 @@ const HAMBURGER_CLOSE = document.getElementById('hamburger_close');
 const HAMBURGER_ITEMS = document.getElementsByClassName('hamb__item');
 const HAMBURGER_BUTTON = document.getElementsByClassName('navbar__button')
 HAMBURGER.addEventListener('click', () => {
-    HAMBURGER.style.visibility = 'hidden';
+    HAMBURGER.style.opacity = '0';
     HAMBURGER_MENU.classList = ('hamburger-menu show');
 });
 
 HAMBURGER_CLOSE.addEventListener('click', () => {
     HAMBURGER_MENU.classList = ('hamburger-menu');
-    setTimeout(HAMBURGER.style.visibility = 'initial', 1000);
+    setTimeout(HAMBURGER.style.opacity = '1');
 });
 
 for (let i = 0; i < HAMBURGER_ITEMS.length; i++) {
     HAMBURGER_ITEMS[i].addEventListener('click', () => {
         HAMBURGER_MENU.classList = ('hamburger-menu');
-        setTimeout(HAMBURGER.style.visibility = 'initial', 1000);
+        setTimeout(HAMBURGER.style.style = '1');
     })
 }
 
 HAMBURGER_ITEMS[0].addEventListener('click', () => {
     HAMBURGER_MENU.classList = ('hamburger-menu');
-    setTimeout(HAMBURGER.style.visibility = 'initial', 1000);
+    setTimeout(HAMBURGER.style.opacity = '1');
 })
 
 for (let i = 0; i < HAMBURGER_BUTTON.length; i++) {
     HAMBURGER_BUTTON[i].addEventListener('click', () => {
         HAMBURGER_MENU.classList = ('hamburger-menu');
-        setTimeout(HAMBURGER.style.visibility = 'initial', 1000);
+        setTimeout(HAMBURGER.style.opacity = '1');
     })
 }
 
@@ -108,7 +107,43 @@ PRO.onclick = CHANGE_PRO_FOCUS;
 
 // Add toggle fucntion for changing classes in plan section (cards)
 
-// Form request
+// Form get app request
+
+const GETAPP_INPUT = document.getElementsByClassName('buy__field-input');
+const GETAPP_BUTTON = document.getElementsByClassName('buy__field');
+
+let getAppValue = '';
+let getAppId = 1;
+
+GETAPP_INPUT[0].addEventListener('input', () => getAppValue = GETAPP_INPUT[0].value);
+
+GETAPP_BUTTON[0].onsubmit = e => {
+    e.preventDefault();
+    function validateEmail(em) {
+        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(em).toLowerCase());
+    }
+    if (validateEmail(getAppValue)) {
+        let subData = {
+            email: getAppValue,
+            id: getAppId
+        };
+        alert(JSON.stringify(subData));
+        fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'post',
+            body: JSON.stringify(subData)
+        }).then(res => console.log(res))
+            .then(() => {
+                console.log('Fetch method is done');
+                subId++;
+            })
+            .catch(error => console.log(error))
+    } else console.log('Wrong email adress (example: something@gmail.com)');
+};
+
+// Form get app request
+
+// Form subscribe request
 
 const SUBSCRIBE_INPUT = document.getElementsByClassName('subscribe__field-input');
 const SUBSCRIBE_BUTTON = document.getElementsByClassName('subscribe__field');
@@ -142,7 +177,7 @@ SUBSCRIBE_BUTTON[0].onsubmit = e => {
     } else console.log('Wrong email adress (example: something@gmail.com)');
 };
 
-// Form request
+// Form subscribe request
 
 // Preloader 
 
