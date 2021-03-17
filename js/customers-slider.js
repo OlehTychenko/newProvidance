@@ -14,8 +14,6 @@ function changeClass(item, feed__item) {
 const SLID_ITEMS = document.querySelectorAll(".customers__slide");
 const FEEDBACK_ITEMS = document.querySelectorAll(".feedback-item");
 
-console.log(SLID_ITEMS)
-
 
 function draw() {
     let offset = -1;
